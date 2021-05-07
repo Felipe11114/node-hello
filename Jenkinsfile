@@ -16,9 +16,7 @@ pipeline {
         
         stage('Build'){
             steps {
-                nodejs(cacheLocationStrategy: workspace(), nodeJSInstallationName: 'NodeJs') {
-                    sh 'npm run start'
-                }
+                sh 'node index.js'
             }
         }
     }
