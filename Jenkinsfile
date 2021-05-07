@@ -9,13 +9,13 @@ pipeline {
 
         stage('Install npm'){
             steps {
-                sh '/usr/bin/npm install'
+                sh 'npm install'
             }
         }
 
         stage('build proyect') {
             steps {
-                sh '/usr/bin/npm start index.js'
+                sh 'npm start index.js'
             }
         }
     }
