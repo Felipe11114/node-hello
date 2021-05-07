@@ -10,13 +10,13 @@ pipeline {
 
         stage('Install npm'){
             steps {
-                npm command: 'npm install', workspaceSubdirectory: 'node-hello'
+                sh 'npm install'
             }
         }
         
         stage('Build proyect npm'){
             steps {
-                npm command: 'npm start', workspaceSubdirectory: 'node-hello'
+                sh 'npm start'
             }
         }
     }
