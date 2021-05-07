@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    tools{ nodejs "node"}
     stages {
         stage('Cloning Git') {
             steps {
@@ -9,9 +10,7 @@ pipeline {
 
         stage('Build npm'){
             steps {
-                nodejs(nodeJSInstallationName : ' Nodo 6.x ', cacheLocationStrategy: workspace()) {
-                    npm command: 'npm start index.js'
-                }
+                npm command: 'npm start index.js'
             }
         }
     }
