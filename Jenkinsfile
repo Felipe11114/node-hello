@@ -16,7 +16,7 @@ pipeline {
         
         stage('Build'){
             steps {
-                container(name: 'aplicacionNodeJs') {
+                nodejs(cacheLocationStrategy: executor(), nodeJSInstallationName: 'NodeJs') {
                     sh 'npm start'
                 }
             }
