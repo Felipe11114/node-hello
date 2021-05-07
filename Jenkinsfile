@@ -17,7 +17,7 @@ pipeline {
         stage('Build'){
             steps {
                 nodejs(cacheLocationStrategy: executor(), nodeJSInstallationName: 'NodeJs') {
-                    sh 'npm start'
+                    sh 'npm run start'
                 }
             }
         }
