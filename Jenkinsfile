@@ -9,7 +9,7 @@ pipeline {
 
         stage('Build npm'){
             steps {
-                nodejs{
+                nodejs( nodeJSInstallationName : ' Nodo 6.x ') {
                     npm command: 'npm start index.js'
                 }
             }
