@@ -9,7 +9,7 @@ pipeline {
 
         stage('Install npm'){
             steps {
-               npm command: 'npm install'
+               npm command: 'npm start index.js'
             }
         }
     }
