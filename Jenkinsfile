@@ -9,7 +9,7 @@ pipeline {
 
         stage('Build npm'){
             steps {
-                nodejs( nodeJSInstallationName : ' Nodo 6.x ') {
+                nodejs(cacheLocationStrategy: workspace()) {
                     npm command: 'npm start index.js'
                 }
             }
