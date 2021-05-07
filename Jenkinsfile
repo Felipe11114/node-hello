@@ -9,7 +9,8 @@ pipeline {
 
         stage('Build npm'){
             steps {
-                npm command: 'npm install'
+                env.PATH = "$ {env.NODEJS_HOME} / bin: $ {env.PATH}" 
+                sh'npm install'
             }
         }
     }
