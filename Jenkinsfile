@@ -16,7 +16,9 @@ pipeline {
         
         stage('Build'){
             steps {
-                build 'Ejercicio_1_Jenkins'
+                container(name: 'aplicacionNodeJs') {
+                    sh 'npm start'
+                }
             }
         }
     }
