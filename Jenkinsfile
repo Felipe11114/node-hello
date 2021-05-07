@@ -9,7 +9,7 @@ pipeline {
 
         stage('Install npm'){
             steps {
-               npm command: 'npm install', workspaceSubdirectory: 'node-hello'
+               npm command: 'npm install'
             }
         }
     }
