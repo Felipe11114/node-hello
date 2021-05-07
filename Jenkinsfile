@@ -16,7 +16,10 @@ pipeline {
         
         stage('Build'){
             steps {
-                sh 'node index.js'
+                nodejs('NodeJs') {
+                    sh 'node index.js'
+                }
+                
             }
         }
     }
