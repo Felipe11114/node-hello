@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    tools{ nodejs "npm"}
     stages {
         stage('Cloning Git') {
             steps {
@@ -10,7 +9,7 @@ pipeline {
 
         stage('Build npm'){
             steps {
-                npm command: 'npm start index.js'
+                npm command: 'npm install'
             }
         }
     }
