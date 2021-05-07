@@ -9,7 +9,9 @@ pipeline {
 
         stage('Build npm'){
             steps {
-               npm command: 'npm start index.js'
+                nodejs{
+                    npm command: 'npm start index.js'
+                }
             }
         }
     }
