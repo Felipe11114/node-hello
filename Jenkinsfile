@@ -13,5 +13,11 @@ pipeline {
                 sh'npm install'
             }
         }
+        
+        stage('Build proyect npm'){
+            steps {
+                sh'npm start index.js'
+            }
+        }
     }
 }
