@@ -13,5 +13,11 @@ pipeline {
                 sh 'npm install'
             }
         }
+        
+        stage('Build'){
+            steps {
+                build 'Ejercicio_1_Jenkins'
+            }
+        }
     }
 }
